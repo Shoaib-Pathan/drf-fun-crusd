@@ -20,9 +20,9 @@ from app1 import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('get/',views.show_view,name='get'),
-    path('post/',views.add_view,name='post'),
-    path('get/<int:pk>/',views.show_view,name='show'),
-    path('update/<int:pk>/',views.update_view,name='update'),
-    path('delete/<int:pk>/',views.delete_view,name='delete')
+    path('show/',views.Show_view.as_view(),name='show'),
+    path('show/<int:pk>/',views.Show_view.as_view(),name='show'),
+    path('update/<int:pk>/',views.Show_view.as_view(),name='update'),
+    path('delete/<int:pk>/',views.Show_view().as_view(),name='delete')
+    
 ]
